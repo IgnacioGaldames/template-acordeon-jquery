@@ -43,7 +43,7 @@
     <div class="col-md-6 col-md-offset-3">
       <h1 class="text-center">Acordeón Jquery</h1>
       <div id="accordion">
-        <h3 class="details-toggle">Section 1 <span class="plus edit-toggle">+</span></h3>
+        <h3 class="details-toggle" tabindex="0">Section 1 <span class="plus edit-toggle">+</span></h3>
         <div>
     <p>
     Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
@@ -52,7 +52,7 @@
     odio. Curabitur malesuada. Vestibulum a velit eu ante scelerisque vulputate.
     </p>
   </div>
-  <h3 class="details-toggle2">Section 2 <span class="plus edit-toggle2">+</span></h3>
+  <h3 class="details-toggle2" tabindex="0">Section 2 <span class="plus edit-toggle2">+</span></h3>
   <div>
     <p>
     Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
@@ -61,7 +61,7 @@
     suscipit faucibus urna.
     </p>
   </div>
-  <h3 class="details-toggle3">Section 3 <span class="plus edit-toggle3">+</span></h3>
+  <h3 class="details-toggle3" tabindex="0">Section 3 <span class="plus edit-toggle3">+</span></h3>
   <div>
     <p>
     Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
@@ -75,7 +75,7 @@
       <li>List item three</li>
     </ul>
   </div>
-  <h3 class="details-toggle4">Section 4 <span class="plus edit-toggle4">+</span></h3>
+  <h3 class="details-toggle4" tabindex="0">Section 4 <span class="plus edit-toggle4">+</span></h3>
   <div>
     <p>
     Cras dictum. Pellentesque habitant morbi tristique senectus et netus
@@ -167,7 +167,7 @@ span.plus {
 <script>
   $(function() {
     $( "#accordion" ).accordion({
-      active: 2,
+      active: 0,
       collapsible: true,
       animate: 200,
     autoHeight: false,
@@ -191,7 +191,23 @@ span.plus {
   $(".details-toggle4").click(function () {
         $(".edit-toggle4").text("-");
         $(".ui-state-active").find(".edit-toggle4").text("+");
-  })
+  });
+  
+  $('#firstform input:text').last().on('keydown', function(e) {
+    if (e.which == 9) {
+        if (!e.shiftKey) {
+            var active = $( "#accordion" ).accordion( "option", "active" );
+            $("#accordion").accordion( "option", "active", active + 1 );
+        }
+    }
+});
+
+   $(function() {
+        $( "#accordion" ).accordion({
+            event: "focusin"
+        });
+    });
+  
 </script>
 </body>
 </html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Documento sin título</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+</head>
+
+<body>
+    <div class="demo">
+        <div id="accordion">
+            <h3><a href="#">Section 1</a></h3>
+            <div id="sub_acordeon1">
+                <h4><a class="texto">¿Qué es el Instituto Nacional de Derechos Humanos (INDH)?</a></h4>
+                <div id="pregunta-1-1" class="pregunta">
+                    El Instituto Nacional de Derechos Humanos (INDH) es un organismo público creado por la <a href="http://www.leychile.cl/Navegar?idNorma=1008867" target="_blank">Ley N° 20.405</a> destinado a promover y proteger los derechos humanos de todas las personas que habitan en Chile. A diferencia de otras instituciones públicas, el INDH no está bajo la autoridad del Poder Ejecutivo (Presidente/a de la República), Legislativo (Congreso Nacional) o Judicial (Tribunales de Justicia), y aunque se financia con fondos públicos, es autónomo e independiente.
+                </div>
+                <h4><a class="texto">¿Qué es el Instituto Nacional de Derechos Humanos (INDH)?</a></h4>
+                <div id="pregunta-1-2" class="pregunta">
+                    El Instituto Nacional de Derechos Humanos (INDH) es un organismo público creado por la <a href="http://www.leychile.cl/Navegar?idNorma=1008867" target="_blank">Ley N° 20.405</a> destinado a promover y proteger los derechos humanos de todas las personas que habitan en Chile. A diferencia de otras instituciones públicas, el INDH no está bajo la autoridad del Poder Ejecutivo (Presidente/a de la República), Legislativo (Congreso Nacional) o Judicial (Tribunales de Justicia), y aunque se financia con fondos públicos, es autónomo e independiente.
+                </div>
+            </div>
+            <h3><a href="#">Section 2</a></h3>
+            <div>
+                <p>Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet purus. Vivamus hendrerit, dolor at aliquet laoreet, mauris turpis porttitor velit, faucibus interdum tellus libero ac justo. Vivamus non quam. In suscipit faucibus urna. </p>
+            </div>
+            <h3><a href="#">Section 3</a></h3>
+            <div>
+                <p>Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis. Phasellus pellentesque purus in massa. Aenean in pede. Phasellus ac libero ac tellus pellentesque semper. Sed ac felis. Sed commodo, magna quis lacinia ornare, quam ante aliquam nisi, eu iaculis leo purus venenatis dui. </p>
+                <ul>
+                    <li>List item one</li>
+                    <li>List item two</li>
+                    <li>List item three</li>
+                </ul>
+            </div>
+            <h3><a href="#">Section 4</a></h3>
+            <div>
+                <p>Cras dictum. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia mauris vel est. </p>
+                <p>Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. </p>
+            </div>
+        </div>
+    </div>
+    <!-- End demo -->
+    <script>
+
+    $(function() {
+        $("#accordion,#sub_acordeon1").accordion({
+            event: "focusin"
+        });
+    });
+    $("#tabs").tabs();
+    </script>
+</body>
+
+</html>
