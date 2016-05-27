@@ -26,11 +26,11 @@
         text-align: center;
         color: #333;
     }
-    
+
     :focus {
         outline: none;
     }
-    
+
     pre {
         font-family: 'Source Code Pro';
     }
@@ -60,7 +60,7 @@
             <div id="Subcontenido2">
                 Texto Sub contenido 2
             </div>
-            
+
         </div>
 </div>
     <!-- /.acordion -->
@@ -69,7 +69,7 @@
         <hr>
         <h2 class="text-center">
 Jquery Accordions
-   
+
   </h2>
     </div>
     <div class="container">
@@ -81,17 +81,18 @@ Jquery Accordions
         <hr>
         <div class="row">
             <div class="col-sm-4 text-justify">
-                <p>Opciones Acoderón Jquery</p>
+                <p>Opciones Acordeón Jquery</p>
                 <pre>
 $(function() {
-  $( "#accordion" ).accordion({
-      active: 2,
-      collapsible: true,
-      animate: 200,
-      autoHeight: false,
-      navigation: true,
-      heightStyle: "content",
-    });
+  $("#accordion,#Contenido1,#Contenido2").accordion({
+    event: "focusin",
+    autoHeight: false,
+    active: false,
+    collapsible: true,
+    animate: 200,
+    navigation: true,
+    heightStyle: "content",
+  });
 });
       </pre>
             </div>
